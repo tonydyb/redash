@@ -39,7 +39,7 @@ services:
   postgres:
     image: postgres:9.5.6-alpine
     volumes:
-      - /Users/dingyoubing/develop/redash-postgres-data:/var/lib/postgresql/data
+      - /Users/y70235/develop/redash-tei/redash-postgres-data:/var/lib/postgresql/data
     restart: always
   nginx:
     image: redash/nginx:latest

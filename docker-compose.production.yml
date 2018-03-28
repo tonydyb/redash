@@ -21,6 +21,7 @@ services:
       REDASH_DATABASE_URL: "postgresql://postgres@postgres/postgres"
       REDASH_COOKIE_SECRET: veryverysecrettei
       REDASH_WEB_WORKERS: 4
+      REDASH_DATE_FORMAT: YYYY/MM/DD
     restart: always
   worker:
     image: redash/redash:latest
@@ -38,8 +39,8 @@ services:
     restart: always
   postgres:
     image: postgres:9.5.6-alpine
-#    volumes:
-#      - /Users/dingyoubing/develop/redash-tei/redash-postgres-data:/var/lib/postgresql/data
+    volumes:
+      - /Users/dingyoubing/develop/redash-tei/redash-postgres-data:/var/lib/postgresql/data
     restart: always
   nginx:
     image: redash/nginx:latest
